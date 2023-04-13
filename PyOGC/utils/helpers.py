@@ -37,8 +37,6 @@ def get_data(endpoint: str, response_format: str) -> str:
     except requests.exceptions.RequestException as e:
         raise e
 
-import requests
-
 def get_data_collections(endpoint, response_format, datetime=None, limit=None):
     """
     Sends a GET request to the specified endpoint and returns the data in the
@@ -79,6 +77,39 @@ def get_data_collections(endpoint, response_format, datetime=None, limit=None):
             response = requests.get(endpoint, headers=headers)
             response.raise_for_status()
             return response.content
+        else:
+            raise ValueError(f"Invalid format specified: {response_format}")
+    except requests.exceptions.RequestException as e:
+        raise e
+
+def post_data(endpoint: str, data: dict, response_format: str) -> str:
+    """
+    Sends a POST request to an endpoint with the specified data and retrieves the response in the specified format.
+
+    Args:
+        endpoint (str): The URL endpoint to send the POST request to.
+        data (dict): The data to send with the POST request.
+        response_format (str): The format in which to retrieve the data. Accepted values
+            are 'json' or 'html'.
+
+    Returns:
+        str: The retrieved data.
+
+    Raises:
+        ValueError: If an invalid format is specified.
+        requests.exceptions.RequestException: If an error occurs while making the request.
+    """
+    headers = {"accept": f"application/{response_format}"}
+
+    try:
+        if response_format == "json":
+            response = requests.post(endpoint, json=data, headers=headers)
+            response.raise_for_status()
+            return response.json()
+        elif response_format == "html":
+            response = requests.post(endpoint, data=data, headers=headers)
+            response.raise_for_status()
+            return response.text
         else:
             raise ValueError(f"Invalid format specified: {response_format}")
     except requests.exceptions.RequestException as e:
