@@ -1,8 +1,8 @@
 from PyOGC.utils.helpers import get_data, post_data
 from PyOGC.utils.urls import base_url
 
-class ProcessesAPI:
 
+class ProcessesAPI:
     def get_processes(self, response_format="json"):
         """
         Returns a list of available processes.
@@ -18,7 +18,7 @@ class ProcessesAPI:
         url = f"{base_url}/processes/{process_id}"
         data = get_data(url, response_format)
         return data
-    
+
     def submit_workflow(self, process_id, data, response_format="json"):
         """
         Submit a processing workflow for execution and retrieve the virtual geospatial data resource.

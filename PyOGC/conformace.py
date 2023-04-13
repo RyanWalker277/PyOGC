@@ -1,5 +1,6 @@
 from PyOGC.utils.helpers import get_data
 
+
 def get_conformance(f="json"):
     """Retrieve the set of OGC API conformance classes that are supported by this service.
     Args:

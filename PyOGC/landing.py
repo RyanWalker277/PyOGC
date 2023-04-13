@@ -2,6 +2,7 @@ import requests
 from PyOGC.utils.helpers import get_data
 from PyOGC.utils.urls import base_url
 
+
 def metadata(f="html"):
     """
     Retrieves the OGC API landing page for the service.

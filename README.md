@@ -49,19 +49,19 @@ If you want to contribute to PyOGC or modify it to suit your needs, you can get 
 ```
 git clone <https://github.com/your_username/PyOGC.git>
 ```
-Change into the directory: 
+Change into the directory:
 ```
 cd PyOGC
 ```
-Create a new virtual environment: 
+Create a new virtual environment:
 ```
 python3 -m venv venv
 ```
-Activate the virtual environment: 
+Activate the virtual environment:
 ```
 source venv/bin/activate
 ```
-Install PyOGC and its dependencies: 
+Install PyOGC and its dependencies:
 ```
 poetry install
 ```
@@ -76,7 +76,7 @@ poetry run pytest tests/test_ogc.py::test_get_capabilities
 ```
 ## Support++
 
-This project needs your shiny star ⭐.  
+This project needs your shiny star ⭐.
 Don't forget to leave a star ⭐️
 
 ![forthebadge made-with-python](https://forthebadge.com/images/badges/open-source.svg) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)

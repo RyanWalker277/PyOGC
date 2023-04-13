@@ -1,8 +1,8 @@
 from PyOGC.utils.helpers import get_data
 from PyOGC.utils.urls import base_url
 
-class TilesAPI:
 
+class TilesAPI:
     def get_tile_matrix_sets(self, response_format="json"):
         """
         Returns a list of available tile matrix sets.
