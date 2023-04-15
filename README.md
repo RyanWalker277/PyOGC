@@ -53,13 +53,9 @@ Change into the directory:
 ```
 cd PyOGC
 ```
-Create a new virtual environment:
+The project uses `poetry` to manage dependencies so you'll have to install poetry globally using pip
 ```
-python3 -m venv venv
-```
-Activate the virtual environment:
-```
-source venv/bin/activate
+pip install poetry
 ```
 Install PyOGC and its dependencies:
 ```
