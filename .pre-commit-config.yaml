@@ -16,11 +16,23 @@ repos:
     rev: v3.3.1
     hooks:
       - id: pyupgrade
-        args: ["--py37-plus"]
-  - repo: https://github.com/psf/black
-    rev: 23.3.0
+        args: ["--py38-plus"]
+  - repo: https://github.com/pre-commit/mirrors-autopep8
+    rev: v1.5.7
     hooks:
-      - id: black
+      - id: autopep8
+        args: [--aggressive, --aggressive, --in-place, --recursive]
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.0.0
+    hooks:
+      - id: flake8
+        types: []
+        files: ^.*\.py$
+        exclude: |
+            (?x)^(
+                PyOGC/__init__.py|
+                setup.py
+            )$
 
 ci:
   autofix_commit_msg: '[pre-commit.ci] auto fixes from pre-commit.com hooks'

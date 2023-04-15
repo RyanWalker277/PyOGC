@@ -10,6 +10,7 @@ packages = [{include = "rp_poetry"}]
 python = "^3.8"
 requests = "^2.28.2"
 pytest = "^7.2.2"
+autopep8 = "^2.0.2"
 
 
 [build-system]
