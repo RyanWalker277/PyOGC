@@ -61,6 +61,10 @@ Install PyOGC and its dependencies:
 ```
 poetry install
 ```
+Install the pre-commit hooks
+```
+pre-commit install
+```
 Once you have installed PyOGC, you can run the tests to make sure everything is working as expected:
 ```
 poetry run pytest
